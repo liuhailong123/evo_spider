@@ -1,0 +1,1 @@
+{  "name": "SP内容管理系统接口文档",  "version": "1.0.0",  "description": "SP内容管理系统接口文档",  "title": "SP内容管理系统接口文档",  "url": "http://10.19.4.247:8888/cms_sp",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2019-07-31T07:56:54.204Z",    "url": "http://apidocjs.com",    "version": "0.17.7"  }}

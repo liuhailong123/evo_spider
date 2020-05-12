@@ -1,0 +1,7 @@
+步骤:
+    1:将/Users/zhanglijie/Desktop/platform/evo-cms/doc/api/js替换为本机路径
+    2:执行脚本
+
+执行脚本实例:
+//LuXin
+apidoc -i /Users/luxin/Documents/workspace/evo-cms-sp/doc/接口文档/js -o /Users/luxin/Documents/workspace/evo-cms-sp/doc/接口文档/html

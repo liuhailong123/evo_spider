@@ -1,0 +1,1 @@
+package cn.com.evo.cms.constant;/** * @create: 2018-10-01 **/public enum Version {    dev(1), test(2), pro(3);    public int index;    private Version(int index) {        this.index = index;    }    public int getIndex() {        return index;    }    public void setIndex(int index) {        this.index = index;    }}

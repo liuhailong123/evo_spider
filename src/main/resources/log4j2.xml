@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<!-- status=debug 可以查看log4j的装配过程 -->
+<configuration status="off" monitorInterval="1800">
+	<properties>
+		<!-- 日志目录 -->
+ 		<property name="LOG_HOME">E:\</property>
+<!--		<property name="LOG_HOME">${web:rootDir}/logs</property>-->
+		<!-- 日志文件名 -->
+		<property name="SERVER_NAME">sp.log</property>
+	</properties>
+	<appenders>
+		<!-- 定义控制台输出 -->
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%-5level] [%thread] %c(%file:%line) - %msg%n" />
+		</Console>
+		<!-- 程序员调试日志 -->
+		<RollingRandomAccessFile name="DevLog" fileName="${LOG_HOME}/${SERVER_NAME}" filePattern="${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd-HH}.log">
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %level [%thread][%c(%file):%line] - %msg%n" />
+			<Policies>
+				<!-- 时间生成策略 间隔24小时 -->
+				<TimeBasedTriggeringPolicy interval="24" modulate="true" />
+				<!-- 大小生成策略 最大 5 MB -->
+				<SizeBasedTriggeringPolicy size="5 MB"/>
+			</Policies>
+			<!-- 生成30个文件，时间靠前删除 -->
+			<DefaultRolloverStrategy max="30"/>
+		</RollingRandomAccessFile>
+	</appenders>
+	<loggers>
+		<!-- 3rdparty Loggers -->
+		<logger name="org.hibernate" level="ERROR">
+		</logger>
+		<logger name="org.apache.shiro" level="ERROR">
+		</logger>
+		<logger name="org.springframework" level="ERROR">
+		</logger>
+		<logger name="org.dozer" level="ERROR">
+		</logger>
+		<logger name="cn.com.evo" level="ERROR">
+		</logger>
+		<!-- Root Logger -->
+		<root level="INFO">
+			<appender-ref ref="DevLog" />
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+</configuration>

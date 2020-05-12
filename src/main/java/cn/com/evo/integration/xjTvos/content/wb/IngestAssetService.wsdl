@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<wsdl:definitions xmlns:homed="http://IngestAssetService.homed.ipanel.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IngestAssetService" targetNamespace="http://IngestAssetService.homed.ipanel.cn">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://IngestAssetService.homed.ipanel.cn">
+			<xsd:element name="IngestAsset">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="FtpPath" type="xsd:string"/>
+						<xsd:element name="AdiFileName" type="xsd:string"/>
+						<xsd:element name="NotifyUrl" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="IngestAssetResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ResultCode" type="xsd:int"/>
+						<xsd:element name="ResultMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="QueryState">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="AssetId" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="QueryStateResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="PlayId" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="StateCode" type="xsd:int"/>
+						<xsd:element name="StateMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Unpublish">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ProviderID" type="xsd:string"/>
+						<xsd:element name="AssetId" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="UnpublishResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ResultCode" type="xsd:int"/>
+						<xsd:element name="ResultMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DeleteAsset">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ProviderID" type="xsd:string"/>
+						<xsd:element name="AssetId" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="DeleteAssetResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ResultCode" type="xsd:int"/>
+						<xsd:element name="ResultMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Publish">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="AssetId" type="xsd:string"/>
+						<xsd:element name="ProviderID" type="xsd:string"/>
+						<xsd:element name="PPVId" type="xsd:string"/>
+						<xsd:element name="ColumnId" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="PublishResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ResultCode" type="xsd:int"/>
+						<xsd:element name="ResultMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="BindProduct">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="Operate" type="xsd:string"/>
+						<xsd:element name="PlayId" type="xsd:string"/>
+						<xsd:element name="PPVId" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="BindProductResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="LSPID" type="xsd:string"/>
+						<xsd:element name="AMSID" type="xsd:string"/>
+						<xsd:element name="Sequence" type="xsd:string"/>
+						<xsd:element name="ResultCode" type="xsd:int"/>
+						<xsd:element name="ResultMsg" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="IngestAsset">
+		<wsdl:part name="parameters" element="homed:IngestAsset"/>
+	</wsdl:message>
+	<wsdl:message name="IngestAssetResponse">
+		<wsdl:part name="parameters" element="homed:IngestAssetResponse"/>
+	</wsdl:message>
+	<wsdl:message name="QueryState">
+		<wsdl:part name="parameters" element="homed:QueryState"/>
+	</wsdl:message>
+	<wsdl:message name="QueryStateResponse">
+		<wsdl:part name="parameters" element="homed:QueryStateResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Unpublish">
+		<wsdl:part name="parameters" element="homed:Unpublish"/>
+	</wsdl:message>
+	<wsdl:message name="UnpublishResponse">
+		<wsdl:part name="parameters" element="homed:UnpublishResponse"/>
+	</wsdl:message>
+	<wsdl:message name="DeleteAsset">
+		<wsdl:part name="parameters" element="homed:DeleteAsset"/>
+	</wsdl:message>
+	<wsdl:message name="DeleteAssetResponse">
+		<wsdl:part name="parameters" element="homed:DeleteAssetResponse"/>
+	</wsdl:message>
+	<wsdl:message name="Publish">
+		<wsdl:part name="parameters" element="homed:Publish"/>
+	</wsdl:message>
+	<wsdl:message name="PublishResponse">
+		<wsdl:part name="parameters" element="homed:PublishResponse"/>
+	</wsdl:message>
+	<wsdl:message name="BindProduct">
+		<wsdl:part name="parameters" element="homed:BindProduct"/>
+	</wsdl:message>
+	<wsdl:message name="BindProductResponse">
+		<wsdl:part name="parameters" element="homed:BindProductResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="IngestAssetService">
+		<wsdl:operation name="IngestAssetDeal">
+			<wsdl:input message="homed:IngestAsset"/>
+			<wsdl:output message="homed:IngestAssetResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="QueryStateDeal">
+			<wsdl:input message="homed:QueryState"/>
+			<wsdl:output message="homed:QueryStateResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="UnpublishDeal">
+			<wsdl:input message="homed:Unpublish"/>
+			<wsdl:output message="homed:UnpublishResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteAssetDeal">
+			<wsdl:input message="homed:DeleteAsset"/>
+			<wsdl:output message="homed:DeleteAssetResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="PublishDeal">
+			<wsdl:input message="homed:Publish"/>
+			<wsdl:output message="homed:PublishResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="BindProductDeal">
+			<wsdl:input message="homed:BindProduct"/>
+			<wsdl:output message="homed:BindProductResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="IngestAssetServiceSOAP" type="homed:IngestAssetService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="IngestAssetDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="QueryStateDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="UnpublishDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteAssetDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="PublishDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="BindProductDeal">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="IngestAssetService">
+		<wsdl:port name="IngestAssetServiceSOAP" binding="homed:IngestAssetServiceSOAP">
+			<soap:address location="http://10.19.7.45:35006/ingest_asset_service"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+package cn.com.evo.integration.guangxi;import org.springframework.stereotype.Service;import javax.transaction.Transactional;/** * @Description: 广西广电鉴权服务类 * @author: lu.xin * @create: 2019-05-14 10:50 AM **/@Service@Transactionalpublic class GxgdAuthServiceImpl {}

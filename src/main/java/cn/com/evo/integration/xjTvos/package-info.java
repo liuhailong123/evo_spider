@@ -1,0 +1,1 @@
+/** * @Description: 新疆Tvos第三方接口 封装 * 10.19.4.249 测试节点   root 密码Tesc1234 * 数据库10.19.4.77  root/XjntOsc_2017 * 10.19.4.100  evoftp/Tesc1234  ftp账号密码 * tomcat路径均为/data/tomcat8080 * tomcat创建一个新的 * content 内容注入类接口封装 * pay 支付类接口封装 * @author: rf * @date 2019/5/16 **/package cn.com.evo.integration.xjTvos;

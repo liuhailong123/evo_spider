@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="iptv" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="iptv" xmlns:intf="iptv" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="iptv" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="CSPResult">
+    <sequence>
+     <element name="Result" type="xsd:int"/>
+     <element name="ErrorDescription" nillable="true" type="soapenc:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="ExecCmdRequest">
+
+      <wsdl:part name="CSPID" type="soapenc:string"/>
+
+      <wsdl:part name="LSPID" type="soapenc:string"/>
+
+      <wsdl:part name="CorrelateID" type="soapenc:string"/>
+
+      <wsdl:part name="CmdFileURL" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="ExecCmdResponse">
+
+      <wsdl:part name="ExecCmdReturn" type="impl:CSPResult"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CSPRequest">
+
+      <wsdl:operation name="ExecCmd" parameterOrder="CSPID LSPID CorrelateID CmdFileURL">
+
+         <wsdl:input message="impl:ExecCmdRequest" name="ExecCmdRequest"/>
+
+         <wsdl:output message="impl:ExecCmdResponse" name="ExecCmdResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ctmsSoapBinding" type="impl:CSPRequest">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="ExecCmd">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="ExecCmdRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="iptv" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="ExecCmdResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="iptv" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CSPRequestService">
+
+      <wsdl:port binding="impl:ctmsSoapBinding" name="ctms">
+
+         <wsdlsoap:address location="http://183.222.171.15:8082/lcms-api/services/ctms"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

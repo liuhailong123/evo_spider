@@ -1,0 +1,1 @@
+/** * @Description: 宁夏声望第三方接口 封装 * content 内容注入类接口封装 * pay 支付类接口封装 * @author: rf * @date 2019/5/16 **/package cn.com.evo.integration.nxsp;

@@ -1,0 +1,278 @@
+/**
+ * Created by Erxiat on 16/2/28.
+ */
+body {
+    margin: 0px;
+}
+
+/*最上层*/
+.mask {
+    height: 100%;
+    width: 100%;
+}
+
+
+.opacity {
+    height: 160%;
+    width: 100%;
+    position: absolute;
+    opacity: 0.8;
+    filter: alpha(opacity=30);
+    background-color: #000;
+    z-index: 10;
+}
+
+#clues {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 20;
+    visibility: hidden;
+}
+
+#downloadText {
+    font-size: 15px;
+    color: #9d9d9d;
+}
+#clues b{
+    font-size: 20px;
+    margin-top: 10px;
+    color: #e7e7e7;
+    z-index: 12;
+}
+
+
+
+
+#spinnerText{
+    position: absolute;
+    font-size: 15px;
+    top: 55%;
+    left: 40%;
+    color: #9d9d9d;
+    z-index: 12;
+}
+
+
+#bottomImg {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+#bottomImg img {
+    width: 100%;
+    height: auto;
+}
+
+.episode {
+    padding-top: 10px;
+}
+
+.episode .episode_num {
+
+}
+
+.episode .episode_num .right_text {
+    text-align: center;
+    padding-left: 10px;
+    font-size: 18px;
+    color: #080808;
+}
+
+.episode .episode_num .left_text {
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;
+    font-size: 10px;
+    color: #666666;
+
+}
+
+#introduce_movie {
+    background-color: #FFFFFF;
+}
+
+#movie_img {
+    padding-top: 5px;
+    padding-left: 0px;
+}
+
+#movie_message {
+    padding-top: 5px;
+    padding-left: 13px;
+}
+
+#movie_message a {
+    font-size: 12px;
+}
+
+/*更多推荐*/
+#recommend {
+    background-color: #F5F5F5;
+    padding: 13px 0px;
+}
+
+#recommend img {
+    width: 31%;
+    height:187px;
+    border:3px solid #ffffff;
+    
+}
+
+#line1{
+    height:187px;
+    width:100%;
+    overflow: hidden;
+}
+#recommend a {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/*选集数字*/
+#box {
+    padding: 0.2rem 0.1rem; /* 80 40 */
+    margin-bottom: 0.1rem; /* 40 */
+    -webkit-box-shadow: 0 0 1.25em rgba(0, 0, 0, .15); /* 20 */
+    -moz-box-shadow: 0 0 1.25em rgba(0, 0, 0, .15); /* 20 */
+    box-shadow: 0 0 1.25em rgba(0, 0, 0, .15); /* 20 */
+}
+
+#box p {
+    color: #4d4348;
+}
+
+.pagination {
+    text-align: left;
+}
+
+.pagination ul {
+    width: 100%;
+    margin: 0;
+    padding: 2px;
+    display: inline-block;
+}
+
+.pagination li {
+    display: inline;
+}
+
+.pagination a {
+    height: 40px; /* 40 */
+    width: 40px;
+    font-size: 1.25rem; /* 20 */
+    line-height: 38px; /* 40 */
+    color: #4d4348;
+    float: left;
+    border: 1.3px solid #DDDDDD;
+    /*padding: 0 1.00rem; !* 20 *!*/
+    text-align: center;
+    margin-top: 2px;
+    text-decoration: none;
+}
+
+.pagination li:not( :first-child ) a {
+    /*margin-left: -1px;*/
+}
+
+.pagination-current a {
+    color: #fff;
+    background-color: #4d4348;
+}
+
+/*电视剧页*/
+#teleplayDiv {
+    display: none;
+}
+
+/*电影页*/
+#movieView {
+    display: none;
+}
+
+.movie_title1 {
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 18px;
+    color: #080808;
+}
+
+.movieIntroduction1 {
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 12px;
+    color: #444444;
+}
+
+.pvDiv {
+    padding-left: 5%;
+    padding-top: 1%;
+    font-size: 12px;
+    color: #444444;
+}
+
+/*默认页*/
+#initView {
+    display: none;
+}
+
+/*加载动画*/
+.spinner {
+    position: absolute;
+    /*margin: 100px auto 0;*/
+    /*width: 150px;*/
+    left: 35%;
+    /*margin: 0 auto;*/
+    z-index: 20;
+    /*text-align: center;*/
+
+}
+
+.spinner > div {
+    width: 40px;
+    height: 40px;
+    background-color: #FF7744;
+
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    40% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}

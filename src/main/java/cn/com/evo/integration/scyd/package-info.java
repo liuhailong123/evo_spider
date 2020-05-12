@@ -1,0 +1,1 @@
+/** * @Description: 四川移动第三方接口 封装 * content 内容注入类接口封装 * pay 支付类接口封装 * @author: lu.xin * @create: 2019-03-05 2:30 PM **/package cn.com.evo.integration.scyd;

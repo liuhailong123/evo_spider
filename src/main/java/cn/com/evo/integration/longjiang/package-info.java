@@ -1,0 +1,1 @@
+/** * @Description: 龙江网络接口封装 * @author: lu.xin * @create: 2019-03-20 10:36 AM **/package cn.com.evo.integration.longjiang;/** * common 公共包 * content 内容相关 * pay 支付相关 * user 用户相关 * voiceSyn 语音同步 */

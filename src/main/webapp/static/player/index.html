@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 不让百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit" >
+    <title></title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="webvr" />
+    <link rel="apple-touch-icon-precomposed" href="favicon.ico">
+    <meta name="msapplication-TileImage" content="favicon.ico">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="pulgins/videojs/video-js.min.css">
+    <link rel="stylesheet" href="pulgins/videojs-panorama/videojs-panorama.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="pulgins/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/datainfo.js"></script>
+    <!-- endbuild -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f6d4d631fd1f32e9fcbc9490731c486f";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+</head>
+
+<body>
+    <div style="display:none;"><img src="favicon.ico" /></div>
+    <!--[if lt IE 10]>
+<p class="browserupgrade">您正在使用版本 <strong>过低</strong> 的浏览器. 请 <a href="http://browsehappy.com/">升级你的浏览器</a> 来提升浏览体验.</p>
+<![endif]-->
+    <div class="player_wrapper">
+        <div class="player_container">
+            <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" crossorigin="anonymous" x5-video-player-type='h5' x5-video-player-fullscreen='true' controls preload="auto" data-setup=''>
+            </video>
+        </div>
+    </div>
+    <div id="downloadApp" style="width: 100%;margin:10px 0px" >
+        <img width="98%" height="auto" src="images/hint.png" alt="404">
+        <div id="android_text" style="font-size: 10px;text-align: center;visibility: hidden;color: #FF0000">安卓用户请在微信—我—设置—通用—开启横屏模式</div>
+    </div>
+    <div id="recommend_text" style="padding-bottom: 10px;font-size: 17px;"><b style="color: #FF7744;padding: 1px;">|</b><a>更多精彩</a>
+    </div>
+    <div id="recommend">
+        <div id="line1" >
+            <div id="recimg">
+               
+            </div>
+            
+        </div>
+    </div>
+    <div style="position:relative;width: 100%;height: 50px; margin:0px auto;">
+        <div style="position:relative;width: 100%;height: 50px; margin:0px auto;" id="pano"></div>
+    </div>
+    <div id="bottomImg" class="bottomImg_test" style="width: 100%;margin:0px auto;" onclick="downloadApp_test()">
+        <img src="images/03.gif" alt="404" />
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="pulgins/jquery/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js scripts/plugins.js -->
+    <script src="pulgins/videojs/video.js"></script>
+    <script src="pulgins/threejs/three.min.js"></script>
+    <script src="pulgins/videojs-panorama/videojs-panorama.v5.js"></script>
+    <!-- LIVE -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/4.1.0/videojs-contrib-hls.min.js"></script> -->
+    <script>
+    videojs.options.flash.swf = "pulgins/videojs/video-js.swf";
+    </script>
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+   
+
+</body>
+
+</html>

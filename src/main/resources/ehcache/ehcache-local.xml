@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ehcache>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" updateCheck="false" name="dataCache">
+
+	<diskStore path="java.io.tmpdir/evo" />
+
+	<!-- DefaultCache setting. -->
+	<defaultCache 
+		maxEntriesLocalHeap="10000" 
+		eternal="false"
+		timeToIdleSeconds="300" 
+		timeToLiveSeconds="600" 
+		overflowToDisk="true"
+		maxEntriesLocalDisk="100000" 
+		memoryStoreEvictionPolicy="LFU"/>
+		
+	<!-- common-->
+	<cache name="SystemCache" 
+		maxEntriesLocalHeap="1000" 
+		eternal="false" 
+		overflowToDisk="true" 
+		maxEntriesLocalDisk="10000" />																	
+</ehcache>

@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'font';
+    src: url('font.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "font";
+    color: #333333;
+    font-variant: small-caps;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: "font";
+    color: #333333;
+    font-size: 23px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-variant: inherit;
+}
+
+.wrap {
+    font-family: "font";
+    font-weight: 100;
+    font-variant: inherit;
+    overflow-y: scroll;
+    background: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 39px 46px;
+}
+
+.wrap h1 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 100;
+    width: 100%;
+    line-height: 72px;
+}
+
+.wrap p {
+    font-size: 23px;
+    line-height: 42px;
+}
+
+.wrap .indent {
+    text-indent: 2em;
+}
+
+.wrap .margbott84 {
+    margin-bottom: 42px;
+}
