@@ -32,7 +32,7 @@
         <xmlapis.version>1.0.b2</xmlapis.version>
         <dom4j.version>1.6.1</dom4j.version>
         <slf4j.version>1.7.18</slf4j.version>
-        <log4j2.version>2.5</log4j2.version>
+        <log4j2.version>2.15.0</log4j2.version>
         <!-- Common End -->
         <!-- Data Access Begin -->
         <mysql.version>5.1.38</mysql.version>
