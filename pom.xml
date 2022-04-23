@@ -51,7 +51,7 @@
         <!-- Spring Begin -->
         <aopalliance.version>1.0</aopalliance.version>
         <aspectj.version>1.8.8</aspectj.version>
-        <spring.version>4.2.5.RELEASE</spring.version>
+        <spring.version>5.3.19</spring.version>
         <spring.data.version>1.11.4.RELEASE</spring.data.version>
         <spring.data.jpa.version>1.9.4.RELEASE</spring.data.jpa.version>
         <dozer.version>5.5.1</dozer.version>
