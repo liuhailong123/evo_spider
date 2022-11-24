@@ -44,7 +44,7 @@
         <jboss.logging.version>3.3.0.Final</jboss.logging.version>
         <ehcache-core.version>2.6.11</ehcache-core.version>
         <ehcache.version>2.10.1</ehcache.version>
-        <hibernate.version>5.1.0.Final</hibernate.version>
+        <hibernate.version>5.3.20.Final</hibernate.version>
         <hibernate.jpa.version>1.0.0.Final</hibernate.jpa.version>
         <hibernate.annotations.version>5.0.1.Final</hibernate.annotations.version>
         <!-- Data Access End -->
